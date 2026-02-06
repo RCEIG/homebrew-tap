@@ -41,6 +41,11 @@ class Pforge < Formula
       Quick start:
         pforge generate
 
+      AI model management (ONNX-enabled builds):
+        pforge model install    Download AI models for offline use
+        pforge model import     Import models from air-gapped bundle
+        pforge model verify     Check model integrity
+
       Documentation: https://pipelineforge.dev/docs
     EOS
   end

@@ -41,6 +41,11 @@ class Pguard < Formula
       Quick start:
         pguard scan .
 
+      AI model management (ONNX-enabled builds):
+        pguard model install    Download AI models for offline use
+        pguard model import     Import models from air-gapped bundle
+        pguard model verify     Check model integrity
+
       Documentation: https://getpguard.com/docs
     EOS
   end

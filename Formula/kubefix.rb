@@ -41,6 +41,11 @@ class Kubefix < Formula
       Quick start:
         kubefix diagnose
 
+      AI model management (ONNX-enabled builds):
+        kubefix model install    Download AI models for offline use
+        kubefix model import     Import models from air-gapped bundle
+        kubefix model verify     Check model integrity
+
       Documentation: https://kubefix.dev/docs
     EOS
   end
