@@ -8,21 +8,21 @@ class Pguard < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.getpguard.com/#{version}/pguard-darwin-arm64"
-      sha256 "PLACEHOLDER_SHA256_DARWIN_ARM64"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-arm64.tar.gz"
+      sha256 "529d6246bdf02cbdc5f787bd9d70dc629c2da377d42257961f3bc343726f4177"
     else
-      url "https://releases.getpguard.com/#{version}/pguard-darwin-amd64"
-      sha256 "PLACEHOLDER_SHA256_DARWIN_AMD64"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-amd64.tar.gz"
+      sha256 "68f8c351083a833f3787df70c9fa7763b315dbedae1408e739f08b3c1cd7cb66"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.getpguard.com/#{version}/pguard-linux-arm64"
-      sha256 "PLACEHOLDER_SHA256_LINUX_ARM64"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-arm64.tar.gz"
+      sha256 "8a19e55d274c541cb8c2495981d8e2d7643ad564a2bebf236ab98f7831bbc3b0"
     else
-      url "https://releases.getpguard.com/#{version}/pguard-linux-amd64"
-      sha256 "PLACEHOLDER_SHA256_LINUX_AMD64"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-amd64.tar.gz"
+      sha256 "b6816afca0e515b85efbad751a1375f6f84fe39021b6af1cb242c4b6955fd96e"
     end
   end
 
