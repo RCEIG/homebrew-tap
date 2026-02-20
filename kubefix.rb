@@ -5,21 +5,21 @@
 class Kubefix < Formula
   desc "KubeFix - AI-powered Kubernetes troubleshooting"
   homepage "https://rocketcitydefense.com"
-  version "0.1.1"
+  version "0.1.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.1/kubefix-darwin-amd64.tar.gz"
-      sha256 "b1ddfa40a6c9c20fd2684a1a6d80793b250f66e58951c45ed9c91d64d88565e0"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.2/kubefix-darwin-amd64.tar.gz"
+      sha256 "45944f7410954502b58193408dc2085c9a207d350b1994b2fbfcae2d3e4480b3"
 
       def install
         bin.install "kubefix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.1/kubefix-darwin-arm64.tar.gz"
-      sha256 "afe34cdc97206d4cb35df931858234da11a84b31d27e27e202f5e50352787688"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.2/kubefix-darwin-arm64.tar.gz"
+      sha256 "bc9a990d8f95d95ba6daca927d9823c22762a7e278852df041b13fafb07c6db2"
 
       def install
         bin.install "kubefix"
@@ -29,15 +29,15 @@ class Kubefix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.1/kubefix-linux-amd64.tar.gz"
-      sha256 "a2d944d374d6cf07626fe99633f5cd27c53d71d5a59b9a913614be38bfedfde4"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.2/kubefix-linux-amd64.tar.gz"
+      sha256 "d74d57e8c744f03f8bf1faf6aec7ccdc340e162d96271d8855f571ed849bcc2f"
       def install
         bin.install "kubefix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.1/kubefix-linux-arm64.tar.gz"
-      sha256 "8d8fc113fafa573c7afbb829f5ca235457f8958dcf4c73abc87407d7f9f2c2b5"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.1.2/kubefix-linux-arm64.tar.gz"
+      sha256 "70ba740589f10df374232f78e454d350d8f7cecc9ea5365455ec3c64efa16784"
       def install
         bin.install "kubefix"
       end
