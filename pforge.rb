@@ -5,21 +5,21 @@
 class Pforge < Formula
   desc "PipelineForge CLI for local pipeline generation and validation"
   homepage "https://pipelineforge.dev"
-  version "1.1.3"
+  version "1.1.4"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.3/pforge-darwin-amd64.tar.gz"
-      sha256 "f79c4c70524ee4aa052b817335c5242c25a1317c9143efd1cba43ebc041b8714"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.4/pforge-darwin-amd64.tar.gz"
+      sha256 "53358edcb33f2c29035c15d89d24d294f3fec85b1ba717ed85789a29792ede8b"
 
       def install
         bin.install "pforge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.3/pforge-darwin-arm64.tar.gz"
-      sha256 "cd879ac68158d39e2b6c65effc7057b4743e6fdca962f2ee9af9f3644866d143"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.4/pforge-darwin-arm64.tar.gz"
+      sha256 "de05473d2861000db8e8c46907ef26507529702797755cfa6839160a6cd9d016"
 
       def install
         bin.install "pforge"
@@ -29,15 +29,15 @@ class Pforge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.3/pforge-linux-amd64.tar.gz"
-      sha256 "fe7a8e03f8aa861dd4c046e8a3e374bb98ef47ea761a60e76b3d7234bdb5a6cc"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.4/pforge-linux-amd64.tar.gz"
+      sha256 "65db23ca669edbc63794c566d6141c2e9d5cc03b6d6b9df7a120987f023c5c46"
       def install
         bin.install "pforge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.3/pforge-linux-arm64.tar.gz"
-      sha256 "c85f97bf19c5f33ff6f603a62634e148fffb61ab7032c28ce96a8abe2c78f7ab"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.1.4/pforge-linux-arm64.tar.gz"
+      sha256 "2d93600224164f63e19025e8d60c99c3c4148d222df24c7b766cbaffe533d187"
       def install
         bin.install "pforge"
       end
