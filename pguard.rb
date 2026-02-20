@@ -5,21 +5,21 @@
 class Pguard < Formula
   desc "PipelineGuard - Secure your CI/CD pipelines"
   homepage "https://rocketcitydefense.com"
-  version "2.11.1"
+  version "2.11.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.1/pguard-darwin-amd64.tar.gz"
-      sha256 "c51fa12290a75050e7369e726b4fef52b60ab24cd5fe203ae2e5abf691c13331"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.2/pguard-darwin-amd64.tar.gz"
+      sha256 "d44785c338f06747460b25c18f1b54098b18a0a0102bf247967ebf7f324b6399"
 
       def install
         bin.install "pguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.1/pguard-darwin-arm64.tar.gz"
-      sha256 "8dcdeeba262dc80a0518fe8f79876d411e8caae990ccf30f2882b1c8d4412b7d"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.2/pguard-darwin-arm64.tar.gz"
+      sha256 "d359a188635c8cdbb6db511f9690b3005787788dad0b23b496140f321b6ef725"
 
       def install
         bin.install "pguard"
@@ -29,15 +29,15 @@ class Pguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.1/pguard-linux-amd64.tar.gz"
-      sha256 "87ac5f3bd1865f984985caab42b0cfb59175179dd18141b42391488a5131b220"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.2/pguard-linux-amd64.tar.gz"
+      sha256 "61ccee483086f04a6862027b17095cad4a5b6ca213b96386795e7454de9f5493"
       def install
         bin.install "pguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.1/pguard-linux-arm64.tar.gz"
-      sha256 "4f076d926b30b62e4e5f9d8992c814ea8b3d4410a11f53a765b5f41af288f594"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.2/pguard-linux-arm64.tar.gz"
+      sha256 "357a9e48e5d040c4abc5f8edb8d036bc8d640808395e399479b9bfb7ee8ca9fe"
       def install
         bin.install "pguard"
       end
