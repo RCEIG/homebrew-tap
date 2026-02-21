@@ -3,26 +3,26 @@
 class Pforge < Formula
   desc "AI-powered pipeline generator - create CI/CD workflows in seconds"
   homepage "https://pipelineforge.dev"
-  version "1.1.4"
+  version "1.1.5"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-darwin-arm64.tar.gz"
-      sha256 "de05473d2861000db8e8c46907ef26507529702797755cfa6839160a6cd9d016"
+      sha256 "64e93a38e64af02a9cb601c7b83d62b34d4ac459b3ec6054a7b2c3d5a7e4ee7a"
     else
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-darwin-amd64.tar.gz"
-      sha256 "53358edcb33f2c29035c15d89d24d294f3fec85b1ba717ed85789a29792ede8b"
+      sha256 "bd59587fdffed96544bbec8ad58aee8d4f9052c4ffc1034fc5d4c93225530de8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-linux-arm64.tar.gz"
-      sha256 "2d93600224164f63e19025e8d60c99c3c4148d222df24c7b766cbaffe533d187"
+      sha256 "f9791f18f07c90b6afa7f0cff937b2c46914c4f8c81425c5bba71266d0fa9305"
     else
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-linux-amd64.tar.gz"
-      sha256 "65db23ca669edbc63794c566d6141c2e9d5cc03b6d6b9df7a120987f023c5c46"
+      sha256 "79151edd07ab5bfbb95dc51afa38aae8acb25693ae95edf771ccec46b76120fc"
     end
   end
 
