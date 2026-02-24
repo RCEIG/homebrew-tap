@@ -3,26 +3,26 @@
 class Pguard < Formula
   desc "Offline-first CI/CD security scanner - catch vulnerabilities before they reach production"
   homepage "https://getpguard.com"
-  version "2.11.3"
+  version "2.12.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-arm64.tar.gz"
-      sha256 "04e129e343e7e7c6078ea24f37121e566335a6235ef903369367e16b8daad7f9"
+      sha256 "757510eeb5e4bea2322605be570820067c56b6d7957cb36d1ff7c719d9d2883d"
     else
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-amd64.tar.gz"
-      sha256 "a2ccf5a0aa244c147997f5ac71961468667f4e297068b5f6c20e9ecc699f792a"
+      sha256 "413f8ba0ad4c3e07d8d88c2528275b51cc98c0f6ee1ffedb3a529238285836ef"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-arm64.tar.gz"
-      sha256 "823f6fe826eef50e1cfe956cc6102e449953253984001929e4b6694a17c2f57f"
+      sha256 "502718b384ad627c73fb6454736c52cba066b6247c9d84e50f0f38c34ea35698"
     else
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-amd64.tar.gz"
-      sha256 "4e0d3a6d7d19c14cafc5cfe3f59ae559d098d6c3248b1a3b7a399c93a5150126"
+      sha256 "e40f7762eb4ad0c063bd5620f7c0b7d630aa3e62eae24aff47b4f68b6694a59c"
     end
   end
 
@@ -36,15 +36,10 @@ class Pguard < Formula
 
   def caveats
     <<~EOS
-      🛡️ PipelineGuard installed successfully!
+      PipelineGuard installed successfully!
 
       Quick start:
         pguard scan .
-
-      AI model management (ONNX-enabled builds):
-        pguard model install    Download AI models for offline use
-        pguard model import     Import models from air-gapped bundle
-        pguard model verify     Check model integrity
 
       Documentation: https://getpguard.com/docs
     EOS

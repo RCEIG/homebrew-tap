@@ -3,26 +3,26 @@
 class Pforge < Formula
   desc "AI-powered pipeline generator - create CI/CD workflows in seconds"
   homepage "https://pipelineforge.dev"
-  version "1.1.5"
+  version "1.2.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-darwin-arm64.tar.gz"
-      sha256 "64e93a38e64af02a9cb601c7b83d62b34d4ac459b3ec6054a7b2c3d5a7e4ee7a"
+      sha256 "5754d604dca5e00cbe3a39c6a72e2245076e76b929631e8d1f8d8df8beaf2982"
     else
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-darwin-amd64.tar.gz"
-      sha256 "bd59587fdffed96544bbec8ad58aee8d4f9052c4ffc1034fc5d4c93225530de8"
+      sha256 "683222a38751234de1593dca9466a31434f2895a04b52c958c83cc7712e53a4f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-linux-arm64.tar.gz"
-      sha256 "f9791f18f07c90b6afa7f0cff937b2c46914c4f8c81425c5bba71266d0fa9305"
+      sha256 "1430af5a697629a49c35e0a65e31ad7f6c2cda69426d49352f3709be6a9fe29c"
     else
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v#{version}/pforge-linux-amd64.tar.gz"
-      sha256 "79151edd07ab5bfbb95dc51afa38aae8acb25693ae95edf771ccec46b76120fc"
+      sha256 "5760dbf5a9e1fc3a77158e318f06e55e33ebe696615c7c0c5ec5af93ae95ecdc"
     end
   end
 
@@ -36,15 +36,10 @@ class Pforge < Formula
 
   def caveats
     <<~EOS
-      ⚡ PipelineForge installed successfully!
+      PipelineForge installed successfully!
 
       Quick start:
         pforge generate
-
-      AI model management (ONNX-enabled builds):
-        pforge model install    Download AI models for offline use
-        pforge model import     Import models from air-gapped bundle
-        pforge model verify     Check model integrity
 
       Documentation: https://pipelineforge.dev/docs
     EOS
