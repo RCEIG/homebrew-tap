@@ -5,21 +5,21 @@
 class Pguard < Formula
   desc "PipelineGuard - Secure your CI/CD pipelines"
   homepage "https://getpguard.com"
-  version "2.12.0"
+  version "2.11.4"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.12.0/pguard-darwin-amd64.tar.gz"
-      sha256 "413f8ba0ad4c3e07d8d88c2528275b51cc98c0f6ee1ffedb3a529238285836ef"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-darwin-amd64.tar.gz"
+      sha256 "663f7865efce4443fbfeb6d6a6e765738e32c1b523392312af3bdb1aaf558466"
 
       define_method(:install) do
         bin.install "pguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.12.0/pguard-darwin-arm64.tar.gz"
-      sha256 "757510eeb5e4bea2322605be570820067c56b6d7957cb36d1ff7c719d9d2883d"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-darwin-arm64.tar.gz"
+      sha256 "13f87bbe8b3def5e0612b9c91e125d1f30acdee61bfcd71c5a5321e6c725abaf"
 
       define_method(:install) do
         bin.install "pguard"
@@ -29,15 +29,15 @@ class Pguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.12.0/pguard-linux-amd64.tar.gz"
-      sha256 "e40f7762eb4ad0c063bd5620f7c0b7d630aa3e62eae24aff47b4f68b6694a59c"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-linux-amd64.tar.gz"
+      sha256 "af769cdb34fd603f23bbb0c6c436c507c7656c366924a943e6a07701c825d03b"
       define_method(:install) do
         bin.install "pguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.12.0/pguard-linux-arm64.tar.gz"
-      sha256 "502718b384ad627c73fb6454736c52cba066b6247c9d84e50f0f38c34ea35698"
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-linux-arm64.tar.gz"
+      sha256 "2f04b873f40f4553c213388c5284e569a43bf4b5571a17813f9373b17a37edd1"
       define_method(:install) do
         bin.install "pguard"
       end
