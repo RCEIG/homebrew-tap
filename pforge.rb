@@ -11,7 +11,7 @@ class Pforge < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.1/pforge-darwin-amd64.tar.gz"
-      sha256 "c5a6dcae0e3b07253975bccdd588ffaf8c7368ba6132cdb02c0a4401c43d79b5"
+      sha256 "83f28b4dbd25914024d1c5e1737c5b77fce97f2683fe72f60a6bfb22a67b590d"
 
       define_method(:install) do
         bin.install "pforge"
@@ -19,7 +19,7 @@ class Pforge < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.1/pforge-darwin-arm64.tar.gz"
-      sha256 "4f6177a334b13d3c10bb8379452be14c2a5082dd3b51cd6d5daa881600130338"
+      sha256 "cfaee90b81750157113e9bc2fd0e12f402ad87c9c6f70bf24fccd874b9a4b6d2"
 
       define_method(:install) do
         bin.install "pforge"
@@ -30,14 +30,14 @@ class Pforge < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.1/pforge-linux-amd64.tar.gz"
-      sha256 "1d70b88897ea3d246d7a94eb7e712d1a6a1f6814bfc11fcd473bf3764ac8d6ef"
+      sha256 "95417f314c06e7f68908372cf6c254ca5213311b3efca8b748372acfff012493"
       define_method(:install) do
         bin.install "pforge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.1/pforge-linux-arm64.tar.gz"
-      sha256 "1ebd26fb4e7601a85ff99c23045ea3d4595eeafbea51ba689dd4a49574829a6c"
+      sha256 "87303eecf5e65a26c3554bb2d94b58ad3b5c9a880d6aaab2b49ab1ee93977592"
       define_method(:install) do
         bin.install "pforge"
       end
