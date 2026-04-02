@@ -11,7 +11,7 @@ class Pguard < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-darwin-amd64.tar.gz"
-      sha256 "e3604ee7c12ec55ba0e21ed54f1a1091a3cf21638cf1c938db2e0b2640dc8fa9"
+      sha256 "71cfbd97ce3fd02b1f0c525799450813d319e78bd6f61d975ce368632604dca2"
 
       define_method(:install) do
         bin.install "pguard"
@@ -19,7 +19,7 @@ class Pguard < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-darwin-arm64.tar.gz"
-      sha256 "9170f2d2d5c5295e6d18a593b6e21c13b9ab32ff28211835d7ab32fad119deb8"
+      sha256 "6126b0f1f94fe43221ed2a48eb0406fcdef155ce60b20db1bee00c04266e7a1a"
 
       define_method(:install) do
         bin.install "pguard"
@@ -30,14 +30,14 @@ class Pguard < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-linux-amd64.tar.gz"
-      sha256 "83deabf295a23e85b44e012db59947b86697eeabb0d750e93b49908e7195ca81"
+      sha256 "08e2de4a44b5851fcbcbe3d5661786fb9410e85416968ee342d41a69c76a7259"
       define_method(:install) do
         bin.install "pguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v2.11.4/pguard-linux-arm64.tar.gz"
-      sha256 "6814b39cb0d1a801540c185a81f543f878fa76618867067e0d46877c70949e4a"
+      sha256 "d52f9d3672e7d47b6e9ac6a85aa16168206354911916689d5d6f3ab464c4f68c"
       define_method(:install) do
         bin.install "pguard"
       end
