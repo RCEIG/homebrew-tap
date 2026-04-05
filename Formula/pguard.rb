@@ -3,26 +3,23 @@
 class Pguard < Formula
   desc "Offline-first CI/CD security scanner - catch vulnerabilities before they reach production"
   homepage "https://getpguard.com"
-  version "2.12.0"
+  version "2.12.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-arm64.tar.gz"
-      sha256 "757510eeb5e4bea2322605be570820067c56b6d7957cb36d1ff7c719d9d2883d"
-    else
-      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-amd64.tar.gz"
-      sha256 "413f8ba0ad4c3e07d8d88c2528275b51cc98c0f6ee1ffedb3a529238285836ef"
+      sha256 "726dd73fd2574a689cb193b75366d501eb259d6bc609cbedd1836203db405bb2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-arm64.tar.gz"
-      sha256 "502718b384ad627c73fb6454736c52cba066b6247c9d84e50f0f38c34ea35698"
+      sha256 "9649cf073f4c01eaf2e71cb1f0f5ff3460d2ea30dd6c0e027b463829c25954c6"
     else
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-amd64.tar.gz"
-      sha256 "e40f7762eb4ad0c063bd5620f7c0b7d630aa3e62eae24aff47b4f68b6694a59c"
+      sha256 "4c507ea71e16d0e5e1fe49fdfab66391f37b60318e058e3f31d8512e3e261563"
     end
   end
 
