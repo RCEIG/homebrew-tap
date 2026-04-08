@@ -5,21 +5,21 @@
 class Pforge < Formula
   desc "PipelineForge CLI for local pipeline generation and validation"
   homepage "https://pipelineforge.dev"
-  version "1.2.4"
+  version "1.2.5"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.4/pforge-darwin-amd64.tar.gz"
-      sha256 "d5515cdd0d9f90fab491f6f2d5d8f40e2b90f7ed6720e8c61e9b98b3ea67bc5d"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.5/pforge-darwin-amd64.tar.gz"
+      sha256 "6d51e42049dfc13a3a81b612c1d0d28e42d2bd87825958c2c2db427d1d41c21b"
 
       define_method(:install) do
         bin.install "pforge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.4/pforge-darwin-arm64.tar.gz"
-      sha256 "715308b28f915848a633bf12a15bdd544394331ba64709bccf0c5ed43d6d3ef8"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.5/pforge-darwin-arm64.tar.gz"
+      sha256 "814d43b3155d7ba078078bd0148070d5a4c14c38986a9a1c123a0d0999d23405"
 
       define_method(:install) do
         bin.install "pforge"
@@ -29,15 +29,15 @@ class Pforge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.4/pforge-linux-amd64.tar.gz"
-      sha256 "0e7b6126833029b87dc73491bd3f889c051c212b98f1e82a858608ae49a5cdb4"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.5/pforge-linux-amd64.tar.gz"
+      sha256 "485e0c034b69e887ecb02c7e32473873f2b34098407c2503049e2076134478bd"
       define_method(:install) do
         bin.install "pforge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.4/pforge-linux-arm64.tar.gz"
-      sha256 "defdc0b85de2adbd54ea8f8f0f11684c8106e100a64947cde021b5f63a3335ff"
+      url "https://github.com/RCEIG/PipelineForge-Product/releases/download/v1.2.5/pforge-linux-arm64.tar.gz"
+      sha256 "b5c5aca1024b8478dd1eadad44d576fcb35b5502673d34697d5a30a698d64134"
       define_method(:install) do
         bin.install "pforge"
       end
