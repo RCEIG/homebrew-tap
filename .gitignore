@@ -1,0 +1,6 @@
+# macOS metadata
+._*
+.DS_Store
+
+# Local editor config
+.vscode/
