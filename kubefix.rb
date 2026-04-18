@@ -5,21 +5,21 @@
 class Kubefix < Formula
   desc "KubeFix - AI-powered Kubernetes troubleshooting"
   homepage "https://kubefix.dev"
-  version "0.2.3"
+  version "0.3.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.2.3/kubefix-darwin-amd64.tar.gz"
-      sha256 "526cabcbc7dbca5bb6dc8d490da7f09ed225140c23967720619a88f079c22c35"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-darwin-amd64.tar.gz"
+      sha256 "684bf922dce1095729ff0f0f24b113874077418c6513a8c9dcf0a9a71c1ca7a1"
 
       define_method(:install) do
         bin.install "kubefix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.2.3/kubefix-darwin-arm64.tar.gz"
-      sha256 "b7329df5961b87e5f71b7710cd244ced31e56e9d9e2b27560110f7d3074e7836"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-darwin-arm64.tar.gz"
+      sha256 "b38063b9ddcdb788ac47e92c672c4979d478046e4855ad085738941e5d3067aa"
 
       define_method(:install) do
         bin.install "kubefix"
@@ -29,15 +29,15 @@ class Kubefix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.2.3/kubefix-linux-amd64.tar.gz"
-      sha256 "c6fba9535467fce81999dedf557ea796f062374a4ccf67218c4c2159aeaff2f9"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-linux-amd64.tar.gz"
+      sha256 "0da53b4a4b269d01d2d991918c8b08c0838aed12dcc5da847df61557458c40df"
       define_method(:install) do
         bin.install "kubefix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.2.3/kubefix-linux-arm64.tar.gz"
-      sha256 "ba6d2bc5da0955eca27a28d4461135cc52b33e29fe2ebf7f1a88145a8c96ec5a"
+      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-linux-arm64.tar.gz"
+      sha256 "706a08f6eb1a446a15fe5943d35e9f638a52001b6a6e4da461c4d03d63fdad9a"
       define_method(:install) do
         bin.install "kubefix"
       end
