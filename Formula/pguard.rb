@@ -9,17 +9,17 @@ class Pguard < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER_DARWIN_ARM64_SHA256"
+      sha256 "1eef44ca4611ac37864528ff35639d90776e83248aeed02d54c3f659c3d3ed51"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-arm64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_ARM64_SHA256"
+      sha256 "d827bbc6e688255267b05135f47c6146baf6a136421ec819aa5d084c89e307d0"
     else
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-linux-amd64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_AMD64_SHA256"
+      sha256 "3e34df4ea7610902dc055b87a4910447bb1c44c469f4613ae8714e5f5ef8f2c9"
     end
   end
 
