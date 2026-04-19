@@ -10,7 +10,7 @@ class Kubefix < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-darwin-amd64.tar.gz"
+      url "https://releases.kubefix.dev/0.3.0/kubefix-darwin-amd64.tar.gz"
       sha256 "bd828b73e595da532b972263992665e64dbed5f645b6a91d98d2082d2eea9008"
 
       define_method(:install) do
@@ -18,7 +18,7 @@ class Kubefix < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-darwin-arm64.tar.gz"
+      url "https://releases.kubefix.dev/0.3.0/kubefix-darwin-arm64.tar.gz"
       sha256 "298456feb6f9b9e358d4c96546a404800736f682ddba7b8f4e6ce820ef019e74"
 
       define_method(:install) do
@@ -29,14 +29,14 @@ class Kubefix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-linux-amd64.tar.gz"
+      url "https://releases.kubefix.dev/0.3.0/kubefix-linux-amd64.tar.gz"
       sha256 "e13ec724296c8dcdff504178a85b133a74693e8037356ea9a28783dd6ead4d60"
       define_method(:install) do
         bin.install "kubefix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RCEIG/kubefix-product/releases/download/v0.3.0/kubefix-linux-arm64.tar.gz"
+      url "https://releases.kubefix.dev/0.3.0/kubefix-linux-arm64.tar.gz"
       sha256 "5f898c2b38bcc527f7d3051018223f21e87d40aca512e4d4c1ff7b9de0d14f49"
       define_method(:install) do
         bin.install "kubefix"
