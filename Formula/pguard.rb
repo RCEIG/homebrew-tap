@@ -10,6 +10,9 @@ class Pguard < Formula
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-arm64.tar.gz"
       sha256 "14b33661a853a88a807f3291ca27a8e60726cf1069c51b9f132e0aa3a824e533"
+    else
+      url "https://github.com/RCEIG/PipelineGuard-Product/releases/download/v#{version}/pguard-darwin-amd64.tar.gz"
+      sha256 "6a808b6ce3140d9f9006b920b8d0abd346a9b756fd423c986d5f556c79e8aee5"
     end
   end
 
