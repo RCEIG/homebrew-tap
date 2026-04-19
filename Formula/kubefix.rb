@@ -9,20 +9,20 @@ class Kubefix < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RCEIG/kubefix-product/releases/download/v#{version}/kubefix-darwin-arm64.tar.gz"
-      sha256 "b38063b9ddcdb788ac47e92c672c4979d478046e4855ad085738941e5d3067aa"
+      sha256 "298456feb6f9b9e358d4c96546a404800736f682ddba7b8f4e6ce820ef019e74"
     else
       url "https://github.com/RCEIG/kubefix-product/releases/download/v#{version}/kubefix-darwin-amd64.tar.gz"
-      sha256 "684bf922dce1095729ff0f0f24b113874077418c6513a8c9dcf0a9a71c1ca7a1"
+      sha256 "bd828b73e595da532b972263992665e64dbed5f645b6a91d98d2082d2eea9008"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/RCEIG/kubefix-product/releases/download/v#{version}/kubefix-linux-arm64.tar.gz"
-      sha256 "706a08f6eb1a446a15fe5943d35e9f638a52001b6a6e4da461c4d03d63fdad9a"
+      sha256 "5f898c2b38bcc527f7d3051018223f21e87d40aca512e4d4c1ff7b9de0d14f49"
     else
       url "https://github.com/RCEIG/kubefix-product/releases/download/v#{version}/kubefix-linux-amd64.tar.gz"
-      sha256 "0da53b4a4b269d01d2d991918c8b08c0838aed12dcc5da847df61557458c40df"
+      sha256 "e13ec724296c8dcdff504178a85b133a74693e8037356ea9a28783dd6ead4d60"
     end
   end
 
